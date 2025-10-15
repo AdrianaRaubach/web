@@ -1,3 +1,11 @@
+<nav>
+    <a href="/inserir_tipo.php"> Inserir novo tipo.</a>
+    <a href="/inserir_poder.php"> Inserir novo poder.</a>
+    <a href="/inserir_pokemon.php">Inserir novo pokemon</a>
+    <a href="/pokemon.php"> Ver lista de pokemons.</a>
+    <a href="/poderes.php"> Ver lista de poderes.</a>
+    <a href="/tipos.php"> Ver lista de tipos.</a>
+</nav>
 <?php
 $conexao = mysqli_connect("localhost","root","mysqluser","pokemons") or print (mysqli_error());
 
@@ -6,9 +14,6 @@ $query = "SELECT id, tipo FROM tipos ORDER BY tipo ASC ";
 $resultado = mysqli_query($conexao,$query);
 ?>
 
-
-<a href="/inserir_tipo.php"> Inserir novo tipo.</a>
-<a href="/pokemon.php"> Ver lista de pokemons.</a>
 <table border="1"><tr>
 	<td><b>Nome</b></td>
 </tr>

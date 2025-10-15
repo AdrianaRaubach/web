@@ -6,26 +6,26 @@
     <a href="/poderes.php"> Ver lista de poderes.</a>
     <a href="/tipos.php"> Ver lista de tipos.</a>
 </nav>
-<form action="inserir_tipo.php" method="POST">
+<form action="inserir_poder.php" method="POST">
 
-        <label>Tipo: </label><br>
-        <input type="text" name="tipo" required><br> 
+        <label>Poder: </label><br>
+        <input type="text" name="poder" required><br> 
     </form>
-
+<a href="/poderes.php"> Voltar para a tela principal </a>
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $tipo=$_POST["tipo"];
+    $poder=$_POST["poder"];
     $conexao = mysqli_connect("localhost","root","mysqluser","pokemons") or print (mysqli_error());
 
-    $query = "insert into tipos(tipo) values ('". $tipo."')";
+    $query = "insert into poderes(nome_poder) values ('". $poder."')";
 
     echo $query;
 
 
     $resultado = mysqli_query($conexao,$query);
-    echo "<h3> Tipo cadastrado com sucesso!</h3><br>";
+    echo "<h3> Poder cadastrado com sucesso!</h3><br>";
     
 
     mysqli_close($conexao);
