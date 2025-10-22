@@ -10,16 +10,17 @@
 
         <label>Poder: </label><br>
         <input type="text" name="poder" required><br> 
+        <button type="submit">Enviar</button>
     </form>
-<a href="/poderes.php"> Voltar para a tela principal </a>
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    require_once 'config.php';
 
     $poder=$_POST["poder"];
-    $conexao = mysqli_connect("localhost","root","mysqluser","pokemons") or print (mysqli_error());
+    $conexao = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or print(mysqli_error());
 
-    $query = "insert into poderes(nome_poder) values ('". $poder."')";
+    $query = "insert into poderes(nome) values ('". $poder."')";
 
     echo $query;
 

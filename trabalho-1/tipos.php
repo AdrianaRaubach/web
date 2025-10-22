@@ -7,7 +7,8 @@
     <a href="/tipos.php"> Ver lista de tipos.</a>
 </nav>
 <?php
-$conexao = mysqli_connect("localhost","root","mysqluser","pokemons") or print (mysqli_error());
+    require_once 'config.php';
+    $conexao = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or print(mysqli_error());
 
 $query = "SELECT id, tipo FROM tipos ORDER BY tipo ASC ";
 

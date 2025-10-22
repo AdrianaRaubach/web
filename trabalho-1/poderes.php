@@ -7,9 +7,10 @@
     <a href="/tipos.php"> Ver lista de tipos.</a>
 </nav>
 <?php
-$conexao = mysqli_connect("localhost","root","mysqluser","pokemons") or print (mysqli_error());
+    require_once 'config.php';
+    $conexao = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME) or print(mysqli_error());
 
-$query = "SELECT id, nome_poder, tipo_id FROM poderes ORDER BY nome_poder ASC ";
+$query = "SELECT id, nome, tipo_id FROM poderes ORDER BY nome ASC ";
 
 $resultado = mysqli_query($conexao,$query);
 ?>
@@ -23,7 +24,7 @@ $resultado = mysqli_query($conexao,$query);
 
 
 while($linha = mysqli_fetch_array($resultado)){
-    echo "<tr><td>".$linha['nome_poder']."</td>
+    echo "<tr><td>".$linha['nome']."</td>
     <td>
         <form action='remover.php' method='POST'>
             <input type='hidden' name='id_para_remover' value=".$linha['id'].">
