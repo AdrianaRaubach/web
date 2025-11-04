@@ -12,9 +12,9 @@
                 <a href="/inserir_tipo.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Inserir novo tipo</a>
                 <a href="/inserir_poder.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Inserir novo poder</a>
                 <a href="/inserir_pokemon.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Inserir novo pokemon</a>
-                <a href="/pokemon.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Ver lista de pokemons</a>
-                <a href="/poderes.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Ver lista de poderes</a>
-                <a href="/tipos.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Ver lista de tipos</a>
+                <a href="/tipos.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Ver tipos</a>
+                <a href="/poderes.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Ver poderes</a>
+                <a href="/pokemon.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Pokédex</a>
             </div>
         </nav>
 
